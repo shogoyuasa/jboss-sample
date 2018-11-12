@@ -139,6 +139,12 @@
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
                     </driver>
+                    <driver name="mysql" module="com.mysql">
+                        <xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</xa-datasource-class>
+                    </driver>
+                    <driver name="postgresql" module="org.postgresql">
+                        <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
+                    </driver>
                     <!-- ##DRIVERS## -->
                 </drivers>
             </datasources>
@@ -156,10 +162,10 @@
                     <managed-thread-factory name="default" jndi-name="java:jboss/ee/concurrency/factory/default" context-service="default"/>
                 </managed-thread-factories>
                 <managed-executor-services>
-                    <managed-executor-service name="default" jndi-name="java:jboss/ee/concurrency/executor/default" context-service="default" hung-task-threshold="60000" keepalive-time="4999"/>
+                    <managed-executor-service name="default" jndi-name="java:jboss/ee/concurrency/executor/default" context-service="default" hung-task-threshold="60000" keepalive-time="5000"/>
                 </managed-executor-services>
                 <managed-scheduled-executor-services>
-                    <managed-scheduled-executor-service name="default" jndi-name="java:jboss/ee/concurrency/scheduler/default" context-service="default" hung-task-threshold="60000" keepalive-time="2999"/>
+                    <managed-scheduled-executor-service name="default" jndi-name="java:jboss/ee/concurrency/scheduler/default" context-service="default" hung-task-threshold="60000" keepalive-time="3000"/>
                 </managed-scheduled-executor-services>
             </concurrent>
             <default-bindings context-service="java:jboss/ee/concurrency/context/default"
@@ -212,7 +218,7 @@
             <default-security-domain value="other"/>
             <default-missing-method-permissions-deny-access value="true"/>
             <log-system-exceptions value="true"/>
-            
+
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:io:2.0">
             <worker name="default"/>
@@ -299,15 +305,15 @@
                     <protocol type="FD_SOCK"/>
                     <protocol type="FD_ALL"/>
                     <protocol type="VERIFY_SUSPECT"/>
-                    
+
                     <protocol type="pbcast.NAKACK2"/>
                     <protocol type="UNICAST3"/>
                     <protocol type="pbcast.STABLE"/>
-                    
+
                 <protocol type="AUTH">
                     <property name="auth_class">org.jgroups.auth.MD5Token</property>
                     <property name="token_hash">SHA</property>
-                    <property name="auth_value">DPJ6MtKA</property>
+                    <property name="auth_value">cHBVYhgW</property>
                 </protocol>
 
                     <protocol type="pbcast.GMS"/>
@@ -322,15 +328,15 @@
                     <protocol type="FD_SOCK"/>
                     <protocol type="FD_ALL"/>
                     <protocol type="VERIFY_SUSPECT"/>
-                    
+
                     <protocol type="pbcast.NAKACK2"/>
                     <protocol type="UNICAST3"/>
                     <protocol type="pbcast.STABLE"/>
-                    
+
                 <protocol type="AUTH">
                     <property name="auth_class">org.jgroups.auth.MD5Token</property>
                     <property name="token_hash">SHA</property>
-                    <property name="auth_value">DPJ6MtKA</property>
+                    <property name="auth_value">cHBVYhgW</property>
                 </protocol>
 
                     <protocol type="pbcast.GMS"/>
@@ -378,7 +384,7 @@
         </in-vm-acceptor>
         <jms-queue name="ExpiryQueue" entries="java:/jms/queue/ExpiryQueue"/>
         <jms-queue name="DLQ" entries="java:/jms/queue/DLQ"/>
-        
+
         <connection-factory name="InVmConnectionFactory" connectors="in-vm" entries="java:/ConnectionFactory"/>
         <connection-factory name="RemoteConnectionFactory" connectors="http-connector" entries="java:jboss/exported/jms/RemoteConnectionFactory" reconnect-attempts="-1" />
         <pooled-connection-factory name="activemq-ra" transaction="xa" connectors="in-vm" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory"/>
@@ -426,7 +432,7 @@
                 <file-audit-log name="local-audit" path="audit.log" relative-to="jboss.server.log.dir" format="JSON"/>
             </audit-logging>
             <security-domains>
-                
+
                 <security-domain name="ApplicationDomain" default-realm="ApplicationRealm" permission-mapper="default-permission-mapper">
                     <realm name="ApplicationRealm" role-decoder="groups-to-roles"/>
                     <realm name="local"/>
@@ -469,7 +475,7 @@
                 </constant-role-mapper>
             </mappers>
             <http>
-                
+
                 <http-authentication-factory name="management-http-authentication" http-server-mechanism-factory="global" security-domain="ManagementDomain">
                     <mechanism-configuration>
                         <mechanism mechanism-name="DIGEST">
@@ -519,7 +525,7 @@
             <!-- ##TLS## -->
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:security:2.0">
-            
+
             <security-domains>
                 <security-domain name="other" cache-type="default">
                     <authentication>
@@ -587,7 +593,7 @@
                 <response-header name="server-header" header-name="Server" header-value="JBoss-EAP/7"/>
                 <response-header name="x-powered-by-header" header-name="X-Powered-By" header-value="Undertow/1"/>
             </filters>
-            
+
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:webservices:2.0">
             <modify-wsdl-address>true</modify-wsdl-address>

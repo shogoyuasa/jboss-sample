@@ -41,7 +41,7 @@
         </repository>
         <repository>
           <id>redhat-ea-repository</id>
-          <url>https://maven.repository.redhat.com/earlyaccess/all/</url>
+          <url>http://3.112.41.22:8081/repository/redhat-ea-group-repo/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -73,7 +73,7 @@
         </pluginRepository>
         <pluginRepository>
           <id>redhat-ea-plugin-repository</id>
-          <url>https://maven.repository.redhat.com/earlyaccess/all/</url>
+          <url>http://3.112.41.22:8081/repository/redhat-ea-group-repo/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -110,7 +110,7 @@
         </repository>
         <repository>
           <id>redhat-ea-repository</id>
-          <url>http://maven.repository.redhat.com/earlyaccess/all/</url>
+          <url>http://3.112.41.22:8081/repository/redhat-ea-group-repo/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -142,7 +142,7 @@
         </pluginRepository>
         <pluginRepository>
           <id>redhat-ea-plugin-repository</id>
-          <url>http://maven.repository.redhat.com/earlyaccess/all/</url>
+          <url>http://3.112.41.22:8081/repository/redhat-ea-group-repo/</url>
           <releases>
             <enabled>true</enabled>
           </releases>

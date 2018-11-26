@@ -51,7 +51,7 @@
         </repository>
         <repository>
           <id>jboss-eap-repository</id>
-          <url>https://maven.repository.redhat.com/techpreview/all</url>
+          <url>http://3.112.41.22:8081/repository/redhat-tp-group-repo/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -83,7 +83,7 @@
         </pluginRepository>
         <pluginRepository>
           <id>jboss-eap-plugin-repository</id>
-          <url>https://maven.repository.redhat.com/techpreview/all</url>
+          <url>http://3.112.41.22:8081/repository/redhat-tp-group-repo/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -120,7 +120,7 @@
         </repository>
         <repository>
           <id>jboss-eap-repository</id>
-          <url>http://maven.repository.redhat.com/techpreview/all</url>
+          <url>http://3.112.41.22:8081/repository/redhat-tp-group-repo/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -152,7 +152,7 @@
         </pluginRepository>
         <pluginRepository>
           <id>jboss-eap-plugin-repository</id>
-          <url>http://maven.repository.redhat.com/techpreview/all</url>
+          <url>http://3.112.41.22:8081/repository/redhat-tp-group-repo/</url>
           <releases>
             <enabled>true</enabled>
           </releases>

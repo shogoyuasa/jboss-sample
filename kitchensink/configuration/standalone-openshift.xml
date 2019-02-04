@@ -135,6 +135,14 @@
         <subsystem xmlns="urn:jboss:domain:datasources:5.0">
             <datasources>
                 <!-- ##DATASOURCES## -->
+                <datasource jndi-name="java:jboss/PostgresDS" pool-name="PostgresDS">
+                    <connection-url>jdbc:postgresql://52.195.0.186:5432/test01</connection-url>
+                    <driver>postgresql</driver>
+                    <security>
+                        <user-name>test01</user-name>
+                        <password>test01</password>
+                    </security>
+                </datasource>
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>

@@ -134,6 +134,7 @@
         <subsystem xmlns="urn:jboss:domain:bean-validation:1.0"/>
         <subsystem xmlns="urn:jboss:domain:datasources:5.0">
             <datasources>
+                <!-- ##DATASOURCES## -->
                 <datasource jndi-name="java:/DB2DS" pool-name="DB2DS">
                   <connection-url>jdbc:db2://172.31.16.94:50000/SAMPLE</connection-url>
                   <driver>ibmdb2</driver>
@@ -147,10 +148,10 @@
                   </security>
                 </datasource>
                 <drivers>
+                    <!-- ##DRIVERS## -->
                     <driver name="ibmdb2" module="com.ibm.db2">
                         <xa-datasource-class>com.ibm.db2.jdbc.DB2XADataSource</xa-datasource-class>
                     </driver>
-                    <!-- ##DRIVERS## -->
                 </drivers>
             </datasources>
         </subsystem>

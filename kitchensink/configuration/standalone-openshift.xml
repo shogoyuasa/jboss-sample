@@ -147,7 +147,7 @@
                     <password>db2inst1-pwd</password>
                   </security>
                   <validation>
-                    <valid-connection-checker>org.jboss.jca.adapters.jdbc.extensions.db2.DB2ValidConnectionChecker</valid-connection-checker>
+                    <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
                     <validate-on-match>true</validate-on-match>
                     <stale-connection-checker>org.jboss.jca.adapters.jdbc.extensions.db2.DB2StaleConnectionChecker</stale-connection-checker>
                     <exception-sorter>org.jboss.jca.adapters.jdbc.extensions.db2.DB2ExceptionSorter</exception-sorter>

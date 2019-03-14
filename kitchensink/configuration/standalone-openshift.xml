@@ -147,10 +147,10 @@
                     <password>db2inst1-pwd</password>
                   </security>
                   <validation>
-                    <valid-connection-checker>org.jboss.jca.adapters.jdbc.extensions.db2.DB2ValidConnectionChecker</valid-connection-checker>
+                    <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.db2.DB2ValidConnectionChecker"/>
                     <validate-on-match>true</validate-on-match>
-                    <stale-connection-checker>org.jboss.jca.adapters.jdbc.extensions.db2.DB2StaleConnectionChecker</stale-connection-checker>
-                    <exception-sorter>org.jboss.jca.adapters.jdbc.extensions.db2.DB2ExceptionSorter</exception-sorter>
+                    <stale-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.db2.DB2StaleConnectionChecker"/>
+                    <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.db2.DB2ExceptionSorter"/>
                   </validation>
                   <timeout>
                     <blocking-timeout-millis>60000</blocking-timeout-millis>

@@ -146,6 +146,9 @@
                     <user-name>db2inst1</user-name>
                     <password>db2inst1-pwd</password>
                   </security>
+                  <timeout>
+                    <blocking-timeout-millis>60000</blocking-timeout-millis>
+                  </timeout>
                 </datasource>
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">

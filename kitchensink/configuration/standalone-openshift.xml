@@ -148,6 +148,9 @@
                   </security>
                 </datasource>
                 <drivers>
+                    <driver name="h2" module="com.h2database.h2">
+                        <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+                    </driver>
                     <driver name="ibmdb2" module="com.ibm.db2">
                         <xa-datasource-class>com.ibm.db2.jdbc.DB2XADataSource</xa-datasource-class>
                     </driver>
